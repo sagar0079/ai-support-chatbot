@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const INITIAL_MESSAGE = {
   role: "assistant",
-  content: "Hi, I'm the Artha support bot. Ask me about billing, trials, or your account.",
+  content: "Hi, I'm the AI support bot. Ask me about billing, trials, or your account.",
 };
 
 export default function App() {
@@ -50,7 +50,7 @@ export default function App() {
         <header className="chat-header">
           <span className="chat-header-dot" />
           <div>
-            <h1>Artha Support</h1>
+            <h1>AI Support</h1>
             <p>AI assistant &middot; demo knowledge base</p>
           </div>
         </header>

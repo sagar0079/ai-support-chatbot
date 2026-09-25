@@ -7,6 +7,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 load_dotenv()
 
+print("GROQ_API_KEY configured:", bool(os.getenv("GROQ_API_KEY")))
+
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
     api_key=os.environ["GROQ_API_KEY"],

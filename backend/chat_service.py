@@ -7,11 +7,16 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 load_dotenv()
 
-print("GROQ_API_KEY configured:", bool(os.getenv("GROQ_API_KEY")))
+api_key = os.getenv("GROQ_API_KEY")
+
+print("GROQ_API_KEY exists:", api_key is not None)
+print("GROQ_API_KEY length:", len(api_key) if api_key else 0)
+print("GROQ_API_KEY starts with gsk_:", api_key.startswith("gsk_") if api_key else False)
+print("GROQ_API_KEY has leading/trailing whitespace:", api_key != api_key.strip() if api_key else False)
 
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
-    api_key=os.environ["GROQ_API_KEY"],
+    api_key=api_key,
 )
 
 MODEL = "openai/gpt-oss-20b"

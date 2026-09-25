@@ -61,7 +61,6 @@ def get_chat_reply(user_message: str) -> str:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message},
         ],
-        temperature=0.3,
         max_completion_tokens=400,
     )
     return response.choices[0].message.content
